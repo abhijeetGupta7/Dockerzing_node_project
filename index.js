@@ -1,4 +1,5 @@
 const express=require("express");
+const { PORT }=require("./config");
 
 const app=express();
 
@@ -6,7 +7,7 @@ app.get("/ping",(req,res)=> {
     res.send("Hello there from the server side");
 })
 
-app.listen(8000,()=> {
+app.listen(PORT,()=> {
     console.log("Server is listening at port 8000");
 })
 
